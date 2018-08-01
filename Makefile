@@ -23,10 +23,10 @@ SHASUM256.txt: $(PPX_BINS)
 	shasum -a 256 $^ > $@
 
 get-ppx = \
-	curl -O -L https://github.com/ELLIOTTCABLE/sedlex/releases/download/v$(*F)/$(@D).zip; \
-	unzip $(@D).zip ppx/$(@F); \
-	mv ppx $(@D); \
-	rm $(@D).zip; \
+	curl -O -L https://github.com/ELLIOTTCABLE/sedlex/releases/download/v$(*F)/$(@D).zip && \
+	unzip $(@D).zip ppx/$(@F) && \
+	mv ppx $(@D) && \
+	rm $(@D).zip && \
 	touch $@
 
 sedlex-ppx-linux64-v%/ppx.exe:

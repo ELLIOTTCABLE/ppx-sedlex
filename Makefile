@@ -1,39 +1,39 @@
-FLOW_VERSION ?= $(shell node -p 'require("./package.json").version')
-FLOW_BINS = \
-	flow-linux64-v$(FLOW_VERSION)/flow \
-	flow-osx-v$(FLOW_VERSION)/flow \
-	flow-win64-v$(FLOW_VERSION)/flow.exe
+PPX_VERSION ?= $(shell node -p 'require("./package.json").version')
+PPX_BINS = \
+	sedlex-ppx-linux64-v$(PPX_VERSION)/ppx.exe \
+	sedlex-ppx-osx-v$(PPX_VERSION)/ppx.exe \
+	sedlex-ppx-win64-v$(PPX_VERSION)/ppx.exe
 
 .PHONY: all
 all: clean build test
 
 .PHONY: clean
 clean:
-	rm -rf flow-*-v* SHASUM256.txt
+	rm -rf sedlex-ppx-*-v* SHASUM256.txt
 
 .PHONY: test
-test: $(FLOW_BINS)
+test: $(PPX_BINS)
 	shasum -c SHASUM256.txt
 	node test.js
 
 .PHONY: build
 build: clean SHASUM256.txt
 
-SHASUM256.txt: $(FLOW_BINS)
+SHASUM256.txt: $(PPX_BINS)
 	shasum -a 256 $^ > $@
 
-get-flow = \
-	curl -O -L https://github.com/facebook/flow/releases/download/v$(*F)/$(@D).zip; \
-	unzip $(@D).zip flow/$(@F); \
-	mv flow $(@D); \
+get-ppx = \
+	curl -O -L https://github.com/ELLIOTTCABLE/sedlex/releases/download/v$(*F)/$(@D).zip; \
+	unzip $(@D).zip ppx/$(@F); \
+	mv ppx $(@D); \
 	rm $(@D).zip; \
 	touch $@
 
-flow-linux64-v%/flow:
-	$(get-flow)
+sedlex-ppx-linux64-v%/ppx.exe:
+	$(get-ppx)
 
-flow-osx-v%/flow:
-	$(get-flow)
+sedlex-ppx-osx-v%/ppx.exe:
+	$(get-ppx)
 
-flow-win64-v%/flow.exe:
-	$(get-flow)
+sedlex-ppx-win64-v%/ppx.exe:
+	$(get-ppx)

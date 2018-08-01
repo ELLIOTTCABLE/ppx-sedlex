@@ -1,17 +1,21 @@
 {
-  "name": "flow-bin",
-  "version": "0.77.0",
-  "description": "Binary wrapper for Flow - A static type checker for JavaScript",
+  "name": "@elliottcable/sedlex-ppx",
+  "version": "0.0.1",
+  "description": "Binary wrapper for Sedlex - A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.",
   "license": "MIT",
-  "repository": "flowtype/flow-bin",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
+  "author": "Alain Frisch <alain.frisch@lexifi.com>",
+  "main": "index.js",
   "bin": {
-    "flow": "cli.js"
+    "ppx": "ppx.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ELLIOTTCABLE/sedlex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ELLIOTTCABLE/sedlex/issues"
+  },
+  "homepage": "https://github.com/ELLIOTTCABLE/sedlex#readme",
   "scripts": {
     "test": "echo \"Error: Run 'make test' instead.\" && exit 1",
     "verify": "shasum -c SHASUM256.txt"
@@ -20,27 +24,30 @@
     "node": ">=0.10.0"
   },
   "files": [
-    "flow-linux64-v*/flow",
-    "flow-osx-v*/flow",
-    "flow-win64-v*/flow.exe",
+    "sedlex-ppx-linux64-v*/ppx.exe",
+    "sedlex-ppx-osx-v*/ppx.exe",
+    "sedlex-ppx-win64-v*/ppx.exe",
     "vendor",
-    "cli.js",
+    "ppx.js",
     "index.js",
     "SHASUM256.txt"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
+    "BuckleScript",
+    "ReasonML",
+    "OCaml",
+    "CLI",
     "bin",
     "binary",
-    "flow",
-    "facebook",
-    "type",
-    "inference",
-    "check",
-    "checker",
-    "javascript",
-    "js",
+    "ppx",
+    "ast",
+    "codegen",
+    "syntax",
+    "parsing",
+    "parser",
+    "lexing",
+    "tokens",
+    "tokenize",
     "wrapper"
-  ]
+]
 }

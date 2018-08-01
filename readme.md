@@ -1,47 +1,10 @@
-# flow-bin [![Build Status](https://travis-ci.org/flowtype/flow-bin.svg?branch=master)](https://travis-ci.org/flowtype/flow-bin)
-
-> Binary wrapper for [Flow](http://flowtype.org) - A static type checker for JavaScript
-
-OS X, Linux (64-bit) and Windows binaries are currently [provided](http://flowtype.org/docs/getting-started.html#_).
-
-
-## CLI
-
-```
-$ npm install --global flow-bin
-```
-
-```
-$ flow --help
-```
-
-
-## API
-
-```
-$ npm install --save flow-bin
-```
-
-```js
-const execFile = require('child_process').execFile;
-const flow = require('flow-bin');
-
-execFile(flow, ['check'], (err, stdout) => {
-	console.log(stdout);
-});
-```
-
-
-## License
-
-flow-bin is MIT-licensed.
-
+# sedlex-ppx [![Build Status](https://travis-ci.org/ELLIOTTCABLE/sedlex-ppx.svg?branch=master)](https://travis-ci.org/ELLIOTTCABLE/sedlex-ppx)
 
 ## Releases
 
 ### New Release
 
-1. Update the "version" in `package.json` to reflect the flow version to publish. (For now, `flow-bin`'s version is also the version of the `flow` binary).
+1. Update the "version" in `package.json` to reflect the Sedlex version to publish.
 2. Run `make`.
   * There should be 2 uncommitted changes at this point: `SHASUM256.txt` and `package.json`.
 3. Commit the changes with the message `Updated binary to v0.30.0`, with the correct version.
@@ -62,7 +25,7 @@ flow-bin is MIT-licensed.
 
 ```sh
 npm pack
-tar xf "flow-bin-$(node -p 'require("./package.json").version').tgz"
+tar xf "sedlex-ppx-$(node -p 'require("./package.json").version').tgz"
 cd package
 npm run verify
 ```

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 'use strict';
 
 var VERSION = require('./package.json').version;
@@ -11,9 +6,9 @@ var path = require('path');
 
 module.exports =
   process.platform === 'darwin'
-    ? path.join(__dirname, 'flow-osx-v' + VERSION, 'flow') :
+    ? path.join(__dirname, 'sedlex-ppx-osx-v' + VERSION, 'ppx.exe') :
   process.platform === 'linux' && process.arch === 'x64'
-    ? path.join(__dirname, 'flow-linux64-v' + VERSION, 'flow') :
+    ? path.join(__dirname, 'sedlex-ppx-linux64-v' + VERSION, 'ppx.exe') :
   process.platform === 'win32' &&  process.arch === 'x64'
-    ? path.join(__dirname, 'flow-win64-v' + VERSION, 'flow.exe') :
+    ? path.join(__dirname, 'sedlex-ppx-win64-v' + VERSION, 'ppx.exe') :
   null;

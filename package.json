@@ -1,6 +1,6 @@
 {
   "name": "@elliottcable/sedlex-ppx",
-  "version": "0.0.1-pre",
+  "version": "1.99.4-pre.1",
   "description": "Binary wrapper for Sedlex - A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.",
   "license": "MIT",
   "author": "Alain Frisch <alain.frisch@lexifi.com>",
@@ -17,16 +17,16 @@
   },
   "homepage": "https://github.com/ELLIOTTCABLE/sedlex#readme",
   "scripts": {
-    "test": "echo \"Error: Run 'make test' instead.\" && exit 1",
+    "test": "make test",
     "verify": "shasum -c SHASUM256.txt"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "files": [
-    "sedlex-ppx-linux64-v*/ppx.exe",
-    "sedlex-ppx-osx-v*/ppx.exe",
-    "sedlex-ppx-win64-v*/ppx.exe",
+    "sedlex-ppx-v*-linux-x64/ppx.exe",
+    "sedlex-ppx-v*-darwin-x64/ppx.exe",
+    "sedlex-ppx-v*-win32-x64/ppx.exe",
     "vendor",
     "ppx.js",
     "index.js",
@@ -49,5 +49,5 @@
     "tokens",
     "tokenize",
     "wrapper"
-]
+  ]
 }

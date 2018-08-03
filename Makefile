@@ -1,15 +1,15 @@
 PPX_VERSION ?= $(shell node -p 'require("./package.json").version')
 PPX_BINS = \
-	sedlex-ppx-linux64-v$(PPX_VERSION)/ppx.exe \
-	sedlex-ppx-osx-v$(PPX_VERSION)/ppx.exe \
-	sedlex-ppx-win64-v$(PPX_VERSION)/ppx.exe
+	sedlex-ppx-v$(PPX_VERSION)-linux-x64/ppx.exe \
+	sedlex-ppx-v$(PPX_VERSION)-darwin-x64/ppx.exe
+#	sedlex-ppx-v$(PPX_VERSION)-win32-x64/ppx.exe
 
 .PHONY: all
 all: clean build test
 
 .PHONY: clean
 clean:
-	rm -rf sedlex-ppx-*-v* SHASUM256.txt
+	rm -r ppx/ sedlex-ppx-v*-*-* SHASUM256.txt
 
 .PHONY: test
 test: $(PPX_BINS)
@@ -24,16 +24,16 @@ SHASUM256.txt: $(PPX_BINS)
 
 get-ppx = \
 	curl -O -L https://github.com/ELLIOTTCABLE/sedlex/releases/download/v$(*F)/$(@D).zip && \
-	unzip $(@D).zip ppx/$(@F) && \
+	unzip -d ppx $(@D).zip $(@F) && \
 	mv ppx $(@D) && \
 	rm $(@D).zip && \
 	touch $@
 
-sedlex-ppx-linux64-v%/ppx.exe:
+sedlex-ppx-v%-linux-x64/ppx.exe:
 	$(get-ppx)
 
-sedlex-ppx-osx-v%/ppx.exe:
+sedlex-ppx-v%-darwin-x64/ppx.exe:
 	$(get-ppx)
 
-sedlex-ppx-win64-v%/ppx.exe:
+sedlex-ppx-v%-win32-x64/ppx.exe:
 	$(get-ppx)

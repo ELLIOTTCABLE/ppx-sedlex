@@ -1,2 +1,0 @@
-37d3c0c1f8d5cf1c551f22312261053629d4469e53738356caa0ab583595545e  ppx-sedlex-v1.99.4-pre.7-linux-x64/ppx.exe
-6ae93192380cbe56971e3d78cc8f33d9924fb0713c3fd1a2553ee7e687dabd48  ppx-sedlex-v1.99.4-pre.7-darwin-x64/ppx.exe

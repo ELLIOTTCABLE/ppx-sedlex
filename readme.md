@@ -1,4 +1,4 @@
-# sedlex-ppx [![Build Status](https://travis-ci.org/ELLIOTTCABLE/sedlex-ppx.svg?branch=master)](https://travis-ci.org/ELLIOTTCABLE/sedlex-ppx)
+# ppx-sedlex [![Build Status](https://travis-ci.org/ELLIOTTCABLE/sedlex.svg?branch=master)](https://travis-ci.org/ELLIOTTCABLE/sedlex)
 
 ## Releases
 
@@ -25,7 +25,7 @@
 
 ```sh
 npm pack
-tar xf "sedlex-ppx-$(node -p 'require("./package.json").version').tgz"
+tar xf "ppx-sedlex-$(node -p 'require("./package.json").version').tgz"
 cd package
 npm run verify
 ```

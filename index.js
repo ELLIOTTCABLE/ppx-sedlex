@@ -6,9 +6,9 @@ var path = require('path');
 
 module.exports =
   process.platform === 'linux' && process.arch === 'x64'
-    ? path.join(__dirname, 'sedlex-ppx-v' + VERSION + '-linux-x64', 'ppx.exe') :
+    ? path.join(__dirname, 'ppx-sedlex-v' + VERSION + '-linux-x64', 'ppx.exe') :
   process.platform === 'darwin' && process.arch === 'x64'
-    ? path.join(__dirname, 'sedlex-ppx-v' + VERSION + '-darwin-x64', 'ppx.exe') :
+    ? path.join(__dirname, 'ppx-sedlex-v' + VERSION + '-darwin-x64', 'ppx.exe') :
   // process.platform === 'win32' &&  process.arch === 'x64'
-  //   ? path.join(__dirname, 'sedlex-ppx-v' + VERSION, 'ppx.exe') :
+  //   ? path.join(__dirname, 'ppx-sedlex-v' + VERSION, 'ppx.exe') :
   null;

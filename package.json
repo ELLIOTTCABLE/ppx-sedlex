@@ -1,7 +1,7 @@
 {
-  "name": "@elliottcable/sedlex-ppx",
-  "version": "1.99.4-pre.1",
-  "description": "Binary wrapper for Sedlex - A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.",
+  "name": "@elliottcable/ppx-sedlex",
+  "version": "1.99.4-pre.3",
+  "description": "Binary wrapper for Sedlex_ppx - A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.",
   "license": "MIT",
   "author": "Alain Frisch <alain.frisch@lexifi.com>",
   "main": "index.js",
@@ -24,9 +24,9 @@
     "node": ">=0.10.0"
   },
   "files": [
-    "sedlex-ppx-v*-linux-x64/ppx.exe",
-    "sedlex-ppx-v*-darwin-x64/ppx.exe",
-    "sedlex-ppx-v*-win32-x64/ppx.exe",
+    "ppx-sedlex-v*-linux-x64/ppx.exe",
+    "ppx-sedlex-v*-darwin-x64/ppx.exe",
+    "ppx-sedlex-v*-win32-x64/ppx.exe",
     "vendor",
     "ppx.js",
     "index.js",

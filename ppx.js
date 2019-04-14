@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-'use strict';
+"use strict"
 
-var spawn = require('child_process').spawn,
-	 path = require("path")
+var spawn = require("child_process").spawn,
+   path = require("path")
 
 // I have concerns about this. This has to invoke `bsc` to determine the associated
 // version of OCaml (because ppxes have to be compiled for the version of the compiler
@@ -19,14 +19,13 @@ var spawn = require('child_process').spawn,
 //
 // Open an Issue if this impacts you.
 var current_ppx_sedlex_id = require("./identify"),
-	bin = path.join(__dirname, "ppx-sedlex-" + current_ppx_sedlex_id, "ppx.exe"),
-	input = process.argv.slice(2);
+   bin = path.join(__dirname, "ppx-sedlex-" + current_ppx_sedlex_id, "ppx.exe"),
+   input = process.argv.slice(2)
 
-input.unshift('--as-ppx');
+input.unshift("--as-ppx")
 
 if (bin != null) {
-  spawn(bin, input, { stdio: 'inherit' })
-    .on('exit', process.exit);
+   spawn(bin, input, { stdio: "inherit" }).on("exit", process.exit)
 } else {
-  throw new Error('Platform not supported.');
+   throw new Error("Platform not supported.")
 }

@@ -1,2 +1,4 @@
-/ppx-sedlex-v*.*-*.zip
-/ppx-sedlex-v*-*-*/
+/ppx-sedlex-v*.*.zip
+/ppx-sedlex-v*-*-*-*/
+
+/node_modules

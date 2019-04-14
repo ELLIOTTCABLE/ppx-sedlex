@@ -4,9 +4,11 @@
   "description": "Binary wrapper for Sedlex_ppx - A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.",
   "license": "MIT",
   "author": "Alain Frisch <alain.frisch@lexifi.com>",
-  "main": "index.js",
   "bin": {
     "ppx": "ppx.js"
+  },
+  "dependencies": {
+    "arch": "^2.1.1"
   },
   "repository": {
     "type": "git",
@@ -24,9 +26,7 @@
     "node": ">=0.10.0"
   },
   "files": [
-    "ppx-sedlex-v*-linux-x64/ppx.exe",
-    "ppx-sedlex-v*-darwin-x64/ppx.exe",
-    "ppx-sedlex-v*-win32-x64/ppx.exe",
+    "ppx-sedlex-v*-*-*-*/ppx.exe",
     "vendor",
     "ppx.js",
     "index.js",

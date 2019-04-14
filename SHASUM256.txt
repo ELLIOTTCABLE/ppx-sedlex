@@ -1,2 +1,0 @@
-a1ce74618fcaf8c349292199be0d9b6af031139bf8afc99e19826ffaffd8665e  ppx-sedlex-v2.0.0-linux-x64/ppx.exe
-7aad9ad02d70227ac65e85aa6e8b5f24c38b94c90487830ccaf21fb7a2d7549b  ppx-sedlex-v2.0.0-darwin-x64/ppx.exe

@@ -1,0 +1,4 @@
+218015bf714b5a22655eac0b969e4cd4150d871fccb05acb3d529d6f58650408  ppx-sedlex-v20.0.0-pre.2-linux-x64-4.02.3/ppx.exe
+222b8c8465a335f8dbc671cb04c49e567ce321ff92ed7ac40b1b44023bb1c7b7  ppx-sedlex-v20.0.0-pre.2-linux-x64-4.06.1/ppx.exe
+983bf40ee34f810d45035712ccc219879a9679c6d929faf3ffc16c4afc9570dd  ppx-sedlex-v20.0.0-pre.2-darwin-x64-4.02.3/ppx.exe
+1f6d5325b5fd003537bbf353ad3b58b877474e5ac7cecbf15955a562b17e58dc  ppx-sedlex-v20.0.0-pre.2-darwin-x64-4.06.1/ppx.exe

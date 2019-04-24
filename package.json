@@ -1,6 +1,6 @@
 {
   "name": "ppx-sedlex",
-  "version": "20.0.0-pre.1",
+  "version": "20.0.0-pre.2",
   "description": "Binary wrapper for Sedlex_ppx - A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.",
   "license": "MIT",
   "author": "Alain Frisch <alain.frisch@lexifi.com>",

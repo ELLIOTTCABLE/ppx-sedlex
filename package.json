@@ -29,7 +29,7 @@
     "ppx-sedlex-v*-*-*-*/ppx.exe",
     "vendor",
     "ppx.js",
-    "index.js",
+    "identify.js",
     "bsconfig.json",
     "SHASUM256.txt"
   ],

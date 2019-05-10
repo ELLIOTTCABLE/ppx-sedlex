@@ -1,8 +1,8 @@
 MIT License
 
-(For this ppx-sedlex Node wrapper, *not* for Sedlex itself.)
+(For this ppx-sedlex Node wrapper, *not* for the upstream Sedlex itself!)
 
-Copyright (c) 2015-present, Facebook, Inc.
+Copyright (c) 2019-present, ELLIOTTCABLE
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

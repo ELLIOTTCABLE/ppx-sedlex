@@ -2,7 +2,6 @@
 
 var VERSION = require("./package.json").version,
    ARCH = require("arch")(),
-   path = require("path"),
    cp = require("child_process")
 
 var bsc_version_regex = /(\w+)\s+(\d+\.\d+\.\d+)(-[^\s]+)?\s+\(Using\s+OCaml(\d+\.\d+\.\d+)\+BS\s*\)/i
@@ -14,7 +13,7 @@ var bsc_executable = require.resolve("bs-platform/lib/bsc.exe"),
    mr = bsc_version.match(bsc_version_regex)
 
 if (null == mr || null == mr[4]) {
-   console.log("`bsc -version failed`, and I can't copy the executable! Got:")
+   console.log("`bsc -version failed`, and I can't invoke the correct executable! Got:")
    console.log("   '" + bsc_version + "'")
    throw new Error("`bsc -version` parsing failed")
 }

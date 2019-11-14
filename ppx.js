@@ -4,7 +4,7 @@
 
 var spawn = require("child_process").spawn,
    path = require("path"),
-   name = require("package.json").name
+   name = require("./package.json").name
 
 // I have concerns about this. This has to invoke `bsc` to determine the associated
 // version of OCaml (because ppxes have to be compiled for the version of the compiler
